@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'io.fabric'
+apply plugin: 'android-apt'
 
 
 android {
@@ -53,6 +54,8 @@ dependencies {
     compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
 
     compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+
     compile "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
     compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
 }
